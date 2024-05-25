@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result Student</title>
+</head>
+<body>
+<h1 th:text="${message}"></h1>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Faculty</th>
+    </tr>
+    <tr>
+        <td th:text="${student.name}">Name</td>
+        <td th:text="${student.age}">Age</td>
+        <td th:text="${student.faculty}">Faculty</td>
+    </tr>
+</table>
+</body>
+</html>
