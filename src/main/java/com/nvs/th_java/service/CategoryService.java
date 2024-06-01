@@ -3,7 +3,6 @@ package com.nvs.th_java.service;
 import com.nvs.th_java.entity.Category;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface CategoryService {
     void addCategory(Category category);

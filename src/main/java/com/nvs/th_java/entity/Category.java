@@ -15,6 +15,6 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Tên là bắt buộc")
+    @NotBlank(message = "Name is required")
     private String name;
 }

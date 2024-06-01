@@ -3,7 +3,6 @@ package com.nvs.th_java.service.impl;
 import com.nvs.th_java.entity.Category;
 import com.nvs.th_java.repository.CategoryRepository;
 import com.nvs.th_java.service.CategoryService;
-import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,7 +42,7 @@ public class CategoryServiceImpl implements CategoryService {
      */
     public void addCategory(Category category) {
         if (categoryRepository.existsByNameIgnoreCase(category.getName())){
-            throw new IllegalStateException("Existing category with Name " + category.getName());
+            throw new IllegalStateException(category.getName() + " is existing");
         }
         categoryRepository.save(category);
     }
@@ -53,12 +52,12 @@ public class CategoryServiceImpl implements CategoryService {
      *
      * @param category the category with updated information
      */
-    public void updateCategory(@NotNull Category category) {
+    public void updateCategory(Category category) {
         Category existingCategory = categoryRepository.findById(category.getId())
                 .orElseThrow(() -> new IllegalStateException("Category with ID " + category.getId() + " does not exist."));
 
         if (categoryRepository.existsByIdNotAndNameIgnoreCase(category.getId(), category.getName())){
-            throw new IllegalStateException("Existing category with Name " + category.getName());
+            throw new IllegalStateException(category.getName() + " is existing");
         }
         existingCategory.setName(category.getName());
         categoryRepository.save(existingCategory);

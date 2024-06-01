@@ -4,9 +4,15 @@ import com.nvs.th_java.entity.Product;
 
 import java.util.List;
 
-
 public interface ProductService {
+
     List<Product> getAllProducts();
 
-    void saveProduct(Product product);
+    void addProduct(Product product);
+
+    Product getProductById(Long id);
+
+    void updateProduct(Product product);
+
+    void deleteProductById(Long id);
 }
