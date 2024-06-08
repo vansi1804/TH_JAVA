@@ -1,6 +1,6 @@
 package com.nvs.th_java.service.impl;
 
-import com.nvs.th_java.entity.Product;
+import com.nvs.th_java.model.Product;
 import com.nvs.th_java.repository.ProductRepository;
 import com.nvs.th_java.service.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -32,8 +32,7 @@ public class ProductServiceImpl implements ProductService {
 
     public void updateProduct(Product product) {
         Product existingProduct = productRepository.findById(product.getId())
-                .orElseThrow(() -> new IllegalStateException("Product with ID: " +
-                        product.getId() + " does not exist."));
+                .orElseThrow(() -> new IllegalStateException("Product with ID: " + product.getId() + " does not exist."));
 
         if (productRepository.existsByIdNotAndNameIgnoreCase(product.getId(), product.getName())){
             throw new IllegalStateException(product.getName() + " is existing");

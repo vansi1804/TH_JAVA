@@ -1,7 +1,6 @@
-package com.nvs.th_java.entity;
+package com.nvs.th_java.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.AllArgsConstructor;

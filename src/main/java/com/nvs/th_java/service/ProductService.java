@@ -1,6 +1,6 @@
 package com.nvs.th_java.service;
 
-import com.nvs.th_java.entity.Product;
+import com.nvs.th_java.model.Product;
 
 import java.util.List;
 

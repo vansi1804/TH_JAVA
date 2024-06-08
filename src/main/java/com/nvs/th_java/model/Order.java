@@ -1,4 +1,4 @@
-package com.nvs.th_java.entity;
+package com.nvs.th_java.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -17,6 +17,16 @@ public class Order {
     private Long id;
 
     private String customerName;
+
+    private String shippingAddress;
+
+    private String phoneNumber;
+
+    private String email;
+
+    private String note;
+
+    private String paymentMethod;
 
     @OneToMany(mappedBy = "order")
     private List<OrderDetail> orderDetails;

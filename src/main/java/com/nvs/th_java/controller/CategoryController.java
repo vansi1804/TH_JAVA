@@ -1,6 +1,6 @@
 package com.nvs.th_java.controller;
 
-import com.nvs.th_java.entity.Category;
+import com.nvs.th_java.model.Category;
 import com.nvs.th_java.service.CategoryService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

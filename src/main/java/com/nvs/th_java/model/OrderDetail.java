@@ -1,4 +1,4 @@
-package com.nvs.th_java.entity;
+package com.nvs.th_java.model;
 
 
 import jakarta.persistence.*;
@@ -23,6 +23,8 @@ public class OrderDetail {
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
+
+    private double price;
 
     @ManyToOne
     @JoinColumn(name = "order_id")

@@ -28,14 +28,12 @@
             <label for="category" class="form-label">Category:</label>
             <select th:field="*{category}" class="form-control" id="category">
                 <option th:each="category : ${categories}"
-                        th:value="${category.id}" th:text="${category.name}" th:selected="${category.id ==
-product.category.id}"></option>
+                        th:value="${category.id}" th:text="${category.name}" th:selected="${category.id == product.category.id}"></option>
             </select>
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description:</label>
-            <textarea th:field="*{description}" class="form-control"
-                      id="description" required></textarea>
+            <textarea th:field="*{description}" class="form-control" id="description" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <a th:href="@{/products}" class="btn btn-link">Cancel</a>

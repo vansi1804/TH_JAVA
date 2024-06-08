@@ -1,6 +1,6 @@
 package com.nvs.th_java.repository;
 
-import com.nvs.th_java.entity.Category;
+import com.nvs.th_java.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.nvs.th_java.controller;
 
-import com.nvs.th_java.entity.Product;
+import com.nvs.th_java.model.Product;
 import com.nvs.th_java.service.CategoryService;
 import com.nvs.th_java.service.ProductService;
 import jakarta.validation.Valid;
